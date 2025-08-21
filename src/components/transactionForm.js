@@ -38,7 +38,7 @@ export default function TransactionsForm({ addTransaction }) {
                 className='border w-32 p-2 rounded-md'
             />
             <input
-                type='text'
+                type='number'
                 value={amount}
                 placeholder='amount'
                 onChange={(e) => setAmount(e.target.value)}
