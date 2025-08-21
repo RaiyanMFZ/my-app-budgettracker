@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-export default function Transactions({ onAdd }) {
+export default function TransactionsForm({ addTransaction }) {
 
     const [name, setName] = useState([]);
     const [amount, setAmount] = useState('');
@@ -13,7 +13,16 @@ export default function Transactions({ onAdd }) {
             alert('Please fill all fields')
             return;
         }
-        onAdd({ id: Date.now(), name, amount: parseFloat(amount), description });
+
+        const newTransaction = {
+            name,
+            amount,
+            description,
+        };
+
+        addTransaction(newTransaction);
+
+        console.log(newTransaction);
         setName('');
         setAmount('');
         setDescription('');
