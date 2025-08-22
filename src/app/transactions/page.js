@@ -43,7 +43,7 @@ export default function Page() {
               >
                 <div>
                   <p className='font-medium'>{t.name}</p>
-                  <p className='text-sm text-gray-400'>{t.description}</p>
+                  <p className='text-sm text-gray-400'>{t.date}</p>
                 </div>
                 <span
                   className={`text-lg font-semibold ${
